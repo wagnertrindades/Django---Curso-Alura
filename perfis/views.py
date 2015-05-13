@@ -7,12 +7,6 @@ def index(resquest):
 
 def exibir(resquest, perfil_id):
 
-	perfil = Perfil()
-
-	if perfil_id == '1':
-		perfil = Perfil('Wagner Trindade', 'wtrindades@hotmail.com', '7777-7777', 'Google')
-
-	if perfil_id == '2':
-		perfil = Perfil('Lucia Elaine', 'luciel@hotmail.com', '1212-1212', 'Esperanca')
+	perfil = Perfil.objects.get(id=perfil_id)
 
 	return render(resquest, 'perfil.html', { "perfil" : perfil })

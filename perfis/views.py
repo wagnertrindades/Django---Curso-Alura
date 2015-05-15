@@ -3,7 +3,7 @@ from perfis.models import Perfil
 
 # Create your views here.
 def index(resquest):
-	return render(resquest, 'index.html', { "perfis" : Perfil.objects.all()})
+	return render(resquest, 'index.html', { "perfis" : Perfil.objects.all(), 'perfil_logado' : get_perfil_logado(resquest)})
 
 def exibir(resquest, perfil_id):
 
@@ -18,4 +18,4 @@ def convidar(resquest, perfil_id):
 	return redirect('index')
 
 def get_perfil_logado(resquest):
-	return Perfil.objects.get(id=1)
+	return Perfil.objects.get(id='1')

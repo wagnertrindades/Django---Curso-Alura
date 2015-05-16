@@ -10,15 +10,15 @@
         
         <input type="text" id="id_email" name="email" class="form-control" placeholder="Email *" required autosfocus>
         
-        <input type="text" id="id_nome" name="nome" class="form-control" placeholder="Nome *" required>
+        <input type="text" id="id_nome" name="nome" class="form-control" placeholder="Nome *" value="{{ form.data.nome }}" required>
 
         <input type="password" id="id_senha" name="senha" class="form-control" placeholder="Senha *" required autosfocus>
 
         <hr>
         
-        <input type="text" id="id_telefone" name="telefone" class="form-control" placeholder="Telefone">
+        <input type="text" id="id_telefone" name="telefone" class="form-control" placeholder="Telefone" value="{{ form.data.telefone }}">
 
-        <input type="text" id="id_nome_empresa" name="nome_empresa" class="form-control" placeholder="Empresa">
+        <input type="text" id="id_nome_empresa" name="nome_empresa" class="form-control" placeholder="Empresa" value="{{ form.data.nome_empresa }}">
 
         <hr>
 
